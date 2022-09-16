@@ -1,0 +1,48 @@
+<div class="uk-container">
+    <div class="uk-text-large uk-text-lead-capi">Dashboard<hr></div>
+    <span uk-spinner="ratio: 4.5" style="position:absolute; top:50%; left:50%;" *ngIf="showSpinner"></span>
+    <div class="uk-container uk-margin uk-height-large" *ngIf="dataLoaded">
+        <div class="uk-child-width-1-4@s" uk-grid>
+            <div>
+                <div class="uk-card uk-card-capi uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Camel
+                    Version:<br />{{serverStatistics.CamelVersion}}</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-capi-light uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Camel
+                    Context:<br />{{serverStatistics.CamelId}}</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-capi uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">Start
+                    Timestamp:<br />{{serverStatistics.StartTimestamp}}</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-capi-light uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">Total
+                    Routes:<br />{{serverStatistics.TotalRoutes}}</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-capi-light uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Exchanges
+                    Total:<br />{{serverStatistics.ExchangesTotal}}</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-capi uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Exchanges
+                    Completed:<br />{{serverStatistics.ExchangesCompleted}}</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-capi-light uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">Started
+                    Routes:<br />{{serverStatistics.StartedRoutes}}</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-capi uk-card-body uk-text-center uk-position-z-index"
+                    uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">
+                    Uptime:<br />{{serverStatistics.Uptime}}</div>
+            </div>
+        </div>
+    </div>
+</div>
